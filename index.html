@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f6">
+  <meta name="description" content="Explore every DevBoost feature: visual inspection, captures, API testing, audits, responsive previews, and debugging tools.">
+  <title>DevBoost | Feature Guide</title>
+  <link rel="icon" href="media/icon48.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#overview" aria-label="DevBoost overview">
+        <img src="media/icon48.png" alt="" width="30" height="30">
+        <span>DevBoost</span>
+      </a>
+      <span class="header-context">Feature guide <span class="header-version">v1.0.7</span></span>
+      <nav class="header-links" aria-label="External links">
+        <a class="header-tour" href="https://youtu.be/Bx0OsJlW7fE" target="_blank" rel="noopener noreferrer">Video tour</a>
+        <a class="header-store" href="https://chromewebstore.google.com/detail/devboost/lekminfdlmkjdjjgkddmomkkjcbbmcog" target="_blank" rel="noopener noreferrer"><span class="wide-label">Get extension</span><span class="small-label">Install</span></a>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar">Menu</button>
+    </div>
+  </header>
+  <div class="site-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Feature navigation">
+      <div class="sidebar-inner">
+        <label class="search-label" for="feature-search">Find a feature</label>
+        <input id="feature-search" class="search-input" type="search" placeholder="Search features" autocomplete="off">
+        <nav id="feature-nav" aria-label="All features"></nav>
+        <div class="sidebar-foot">Built for the page in front of you.</div>
+      </div>
+    </aside>
+    <button id="menu-backdrop" class="menu-backdrop" type="button" aria-label="Close feature menu" tabindex="-1"></button>
+    <main id="main" class="main-content" tabindex="-1"></main>
+  </div>
+  <footer class="site-footer">
+    <span>DevBoost <span id="footer-version">1.0.7</span></span>
+    <span>Documentation for the current extension build.</span>
+  </footer>
+</body>
+</html>
