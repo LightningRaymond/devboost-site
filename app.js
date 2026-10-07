@@ -194,10 +194,34 @@ const features = [
     id: 'clear-cache', title: 'Clear Cache', group: 'utility', image: 'clear-cache.png',
     summary: 'Refresh cached data for the current site without clearing your entire browser history.',
     useCase: 'Use this after replacing a stylesheet, script, or image when Chrome still displays the older file. It targets the current site so other sites are left alone.',
-    capabilities: ['Use the popup quick action for the current site.', 'Repeat a test against fresh page resources.'],
+    capabilities: ['Clear cached data for the current site from the popup.', 'Repeat a test against fresh page resources.'],
     steps: ['Open the DevBoost popup on the affected site.', 'Choose Clear Cache.', 'Reload the page and repeat your test.'],
     note: 'Use this deliberately when comparing cached and uncached behavior.',
     related: ['performance', 'network']
+  },
+  {
+    id: 'grid', title: 'Grid', group: 'utility', image: 'grid.png',
+    summary: 'Overlay an adjustable grid on the live page to check alignment and spacing.',
+    useCase: 'Use Grid while checking column rhythm or vertical spacing against a layout. The overlay leaves the page interactive, so you can inspect sections without closing it.',
+    capabilities: ['Adjust column gap and row spacing in pixels.', 'Set line stroke width and color.', 'Keep your settings for the next use.'],
+    steps: ['Choose Grid from the popup.', 'Tune gap, row spacing, stroke, and color in the floating panel.', 'Close the overlay when the alignment check is done.'],
+    related: ['ruler', 'inspector', 'responsive']
+  },
+  {
+    id: 'ruler', title: 'Ruler', group: 'utility', image: 'ruler.png',
+    summary: 'Drag over the page to measure a region in pixels.',
+    useCase: 'Check the visible distance between page elements or estimate the space a component occupies without leaving the browser.',
+    capabilities: ['Draw a measurement rectangle over the current viewport.', 'Read its width and height in pixels.', 'Dismiss the ruler with its close button or Escape.'],
+    steps: ['Choose Ruler from the popup.', 'Drag across the region you want to measure.', 'Read the dimensions beside the selection.'],
+    related: ['grid', 'inspector']
+  },
+  {
+    id: 'word-count', title: 'Word Count', group: 'utility', image: 'word-count.png',
+    summary: 'Count words and reading time for a selection, visible page text, or a picked element.',
+    useCase: 'Use Word Count for editorial checks when a page or content block has a length target. It also reports characters, characters without spaces, and sentences.',
+    capabilities: ['Count a text selection, the visible page, or one picked element.', 'Show words, characters, sentences, and estimated reading time.', 'Switch scope without reopening the tool.'],
+    steps: ['Choose Word Count from the popup.', 'Select Page, Selection, or Pick element.', 'Review the totals in the floating panel.'],
+    related: ['seo', 'inspector']
   }
 ];
 
@@ -250,7 +274,7 @@ function renderOverview() {
   main.innerHTML = `
     <div class="eyebrow">The complete feature guide</div>
     <h1>DevBoost</h1>
-    <p class="intro">Inspect, test, audit, capture, and debug the web page in front of you. This guide covers every tool in DevBoost 1.0.7, from quick on-page panels to the deeper DevTools workspace.</p>
+    <p class="intro">Inspect, test, audit, capture, and debug the web page in front of you. This guide covers every DevBoost tool, from quick on-page panels to the deeper DevTools workspace.</p>
     <div class="hero-actions"><a class="button primary" href="${storeUrl}" target="_blank" rel="noopener noreferrer">Add to Chrome</a><a class="button" href="#feature/inspector">Explore the tools</a><a class="button" href="https://youtu.be/Bx0OsJlW7fE" target="_blank" rel="noopener noreferrer">Watch the video tour</a></div>
     <figure class="overview-media"><img src="media/01-inspector.png" alt="DevBoost Inspector selecting a heading and showing editable typography controls on a real page" width="1280" height="800"><figcaption class="media-caption"><strong>In the browser.</strong> Real DevBoost tools working on a sample page.</figcaption></figure>
     <section class="showcase" aria-labelledby="showcase-title"><div class="section-heading"><h2 id="showcase-title">Inside the toolkit</h2><span>Real interface captures</span></div><div class="showcase-grid">
@@ -266,7 +290,7 @@ function renderOverview() {
 
 function renderFeature(feature) {
   const group = groups.find(item => item.id === feature.group);
-  const entryPoint = feature.id === 'clear-cache' ? 'Popup > Quick Tools'
+  const entryPoint = feature.id === 'clear-cache' ? 'DevBoost popup'
     : ['beautifier', 'diff-checker'].includes(feature.id) ? 'Chrome DevTools > DevBoost > Code Tools'
     : feature.group === 'devtools' ? 'Chrome DevTools > DevBoost'
     : ['performance', 'accessibility', 'agentic'].includes(feature.id) ? 'Popup or Chrome DevTools > DevBoost'
