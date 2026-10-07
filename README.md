@@ -8,4 +8,4 @@ GitHub Pages serves the `main` branch from the repository root. Updating `index.
 
 The feature copy and navigation live in `app.js`. When the extension changes, update the matching feature entry, refresh its screenshot, and test the site on desktop and mobile before pushing.
 
-The video tour opens on YouTube rather than embedding a third-party player into the site.
+The video tour opens on YouTube rather than embedding a third-party player into the site. `updates.html` is the hosted changelog opened by the extension after a version update; refresh its text and screenshots before each store release.

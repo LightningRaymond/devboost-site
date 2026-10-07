@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1117">
+  <meta name="description" content="Recent DevBoost changes, with screenshots of the tools in use.">
+  <title>Latest updates | DevBoost</title>
+  <link rel="icon" href="media/icon48.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="updates.css">
+  <script defer src="updates.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to updates</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html#overview"><img src="media/icon48.png" alt="" width="30" height="30">DevBoost</a>
+      <span class="header-context">Latest updates</span>
+      <nav class="header-links" aria-label="Main navigation">
+        <a href="index.html#overview">Feature guide</a>
+        <a class="header-store" href="https://chromewebstore.google.com/detail/devboost/lekminfdlmkjdjjgkddmomkkjcbbmcog" target="_blank" rel="noopener noreferrer">Get extension</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="updates-main">
+    <header class="updates-intro">
+      <p class="eyebrow">DevBoost changes</p>
+      <h1>Latest updates</h1>
+      <p class="intro">A closer look at what changed in the browser tools.</p>
+      <p id="updated-version" class="updated-version" hidden></p>
+    </header>
+
+    <section class="update-section" aria-labelledby="updates-capture">
+      <div class="update-copy">
+        <h2 id="updates-capture">Capture beyond the viewport</h2>
+        <p>The capture panel gets out of the way while you pick an element or draw an area. Element captures now stitch tall and wide targets into one image, and the result can go straight to Text Extract.</p>
+      </div>
+      <figure class="update-figure">
+        <img src="media/capture-element.png" alt="DevBoost capture panel showing an element screenshot and the Text Extract action" width="800" height="600">
+        <figcaption>Element capture and Text Extract in the capture panel.</figcaption>
+      </figure>
+    </section>
+
+    <section class="update-section" aria-labelledby="updates-inspector">
+      <div class="update-copy">
+        <h2 id="updates-inspector">More context while inspecting</h2>
+        <p>Switch on Additional details to see computed font family, size, weight, line height and a text-contrast AA indicator beside the highlighted element. The responsive viewer also restores your last open screen sizes next time.</p>
+      </div>
+      <figure class="update-figure">
+        <img src="media/inspector-details.png" alt="Inspector highlight showing font settings and text contrast details" width="800" height="600">
+        <figcaption>Typography and contrast alongside the selected element.</figcaption>
+      </figure>
+    </section>
+
+    <section class="update-section" aria-labelledby="updates-tools">
+      <div class="update-copy">
+        <h2 id="updates-tools">Quick Tools you choose</h2>
+        <p>Star any feature to put it in Quick Tools while keeping it in the main grid. Capture, Eyedropper and Responsive are the starting favourites. Cache, cookies and storage now have separate site-data actions.</p>
+        <p>Site Stack shows an asset version beside a WordPress plugin when its public asset URL exposes one. Eyedropper colour groups start collapsed.</p>
+      </div>
+      <figure class="update-figure popup-figure">
+        <img src="media/quick-tools.png" alt="DevBoost popup with Capture, Eyedropper and Responsive in Quick Tools" width="360" height="600">
+        <figcaption>Quick Tools with the default three favourites.</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer class="site-footer"><span>DevBoost</span><a href="index.html#overview">Browse all features</a></footer>
+</body>
+</html>
