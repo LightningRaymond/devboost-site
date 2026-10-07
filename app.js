@@ -87,7 +87,7 @@ const features = [
     id: 'performance', title: 'Performance', group: 'page', image: 'devboost-performance.png',
     summary: 'Scan the current page for practical performance signals and heavy resources.',
     useCase: 'Use the scan to find likely bottlenecks on the current page, especially large resource groups. Pair an oversized-image finding with Assets to prepare a smaller replacement.',
-    capabilities: ['Review page metrics and resource breakdowns.', 'Inspect audit findings in the on-page tool or DevTools panel.', 'Export DevTools scan results as JSON.', 'Use asset optimization alongside findings about oversized images.'],
+    capabilities: ['Review page metrics and resource breakdowns.', 'Highlight LCP, layout-shift, and interaction targets on the page.', 'Inspect audit findings in the on-page tool or DevTools panel.', 'Export DevTools scan results as JSON.', 'Use asset optimization alongside findings about oversized images.'],
     steps: ['Open Performance from the popup or DevBoost DevTools tab.', 'Run a scan, optionally after a reload.', 'Review audits and resource sizes, then export the result if needed.'],
     note: 'These checks describe the current browser session and do not replace a controlled lab benchmark.',
     related: ['assets', 'network', 'accessibility']
